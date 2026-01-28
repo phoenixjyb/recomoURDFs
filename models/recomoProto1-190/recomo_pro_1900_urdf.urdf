@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="recomo_pro_1900_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0018565 -0.030946 0.4286"
+        rpy="0 0 0" />
+      <mass
+        value="21" />
+      <inertia
+        ixx="0.35163"
+        ixy="0.010802"
+        ixz="3.1472E-05"
+        iyy="0.31462"
+        iyz="-0.026307"
+        izz="0.29061" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.4 0.4 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="arm_base_link">
+    <inertial>
+      <origin
+        xyz="-0.00014044 0.00033905 -0.038979"
+        rpy="0 0 0" />
+      <mass
+        value="0.095731" />
+      <inertia
+        ixx="3.5316E-05"
+        ixy="1.4007E-17"
+        ixz="-4.2483E-18"
+        iyy="3.5316E-05"
+        iyz="-1.3664E-18"
+        izz="3.0657E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/arm_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.81176 0.84314 0.9098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/arm_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_base_joint"
+    type="fixed">
+    <origin
+      xyz="0.00047949 0 0.8428"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="arm_base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="arm_link_1">
+    <inertial>
+      <origin
+        xyz="-0.00076511 0.01952 0.036816"
+        rpy="0 0 0" />
+      <mass
+        value="0.25437" />
+      <inertia
+        ixx="0.00011819"
+        ixy="5.2034E-06"
+        ixz="-2.9439E-07"
+        iyy="0.00013224"
+        iyz="-9.3731E-07"
+        izz="0.00015359" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/arm_link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.81176 0.84314 0.9098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/arm_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint_1"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="arm_base_link" />
+    <child
+      link="arm_link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="10"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="arm_link_2">
+    <inertial>
+      <origin
+        xyz="-0.00014049 0.19933 0.04128"
+        rpy="0 0 0" />
+      <mass
+        value="0.37028" />
+      <inertia
+        ixx="0.0029246"
+        ixy="-1.9725E-10"
+        ixz="-1.9794E-11"
+        iyy="0.0001955"
+        iyz="-1.9451E-07"
+        izz="0.0030148" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/arm_link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/arm_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.044"
+      rpy="1.5708 0 0" />
+    <parent
+      link="arm_link_1" />
+    <child
+      link="arm_link_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="30"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="arm_link_3">
+    <inertial>
+      <origin
+        xyz="0.003885 -0.24452 0.010275"
+        rpy="0 0 0" />
+      <mass
+        value="0.729" />
+      <inertia
+        ixx="0.0012982"
+        ixy="6.7816E-06"
+        ixz="8.5018E-06"
+        iyy="0.00049301"
+        iyz="-6.3489E-06"
+        izz="0.0013628" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/arm_link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/arm_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0.4 0"
+      rpy="3.1416 0 0" />
+    <parent
+      link="arm_link_2" />
+    <child
+      link="arm_link_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="30"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="arm_link_4">
+    <inertial>
+      <origin
+        xyz="-0.070164 4.3368E-17 0.042022"
+        rpy="0 0 0" />
+      <mass
+        value="0.13278" />
+      <inertia
+        ixx="0.00012819"
+        ixy="-2.7105E-20"
+        ixz="0.0001679"
+        iyy="0.00043346"
+        iyz="2.7105E-20"
+        izz="0.00033786" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/arm_link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96078 0.83137 0.72549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/arm_link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint_4"
+    type="continuous">
+    <origin
+      xyz="0.02166 -0.47088 -0.0017763"
+      rpy="1.5708 0 0" />
+    <parent
+      link="arm_link_3" />
+    <child
+      link="arm_link_4" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="arm_link_5">
+    <inertial>
+      <origin
+        xyz="-0.0017207 -0.063107 0.072648"
+        rpy="0 0 0" />
+      <mass
+        value="0.14569" />
+      <inertia
+        ixx="0.00061559"
+        ixy="-6.2991E-06"
+        ixz="1.0646E-05"
+        iyy="0.00042549"
+        iyz="0.00023199"
+        izz="0.00022502" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/arm_link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.70588 0.85882 0.7451 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/arm_link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint_5"
+    type="revolute">
+    <origin
+      xyz="-0.099888 0 0.077538"
+      rpy="0 0.94248 0" />
+    <parent
+      link="arm_link_4" />
+    <child
+      link="arm_link_5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.2"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="arm_link_6">
+    <inertial>
+      <origin
+        xyz="-0.0050729 0.033014 0.045516"
+        rpy="0 0 0" />
+      <mass
+        value="0.11479" />
+      <inertia
+        ixx="0.0002457"
+        ixy="9.9849E-06"
+        ixz="1.7169E-05"
+        iyy="0.0001741"
+        iyz="-7.7172E-05"
+        izz="0.0001101" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/arm_link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.78039 0.89412 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/arm_link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm_joint_6"
+    type="revolute">
+    <origin
+      xyz="-0.0031465 -0.075 0.12575"
+      rpy="-1.5708 -0.94248 0" />
+    <parent
+      link="arm_link_5" />
+    <child
+      link="arm_link_6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.2"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cam_link">
+    <inertial>
+      <origin
+        xyz="-0.0092646 -4.9409E-05 0.0081469"
+        rpy="0 0 0" />
+      <mass
+        value="0.69964" />
+      <inertia
+        ixx="0.0003447"
+        ixy="-6.5753E-06"
+        ixz="2.4463E-05"
+        iyy="0.00056714"
+        iyz="1.3804E-06"
+        izz="0.00070106" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/cam_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://recomo_pro_1900_urdf/meshes/cam_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cam_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0019634 0.0065609 0.10147"
+      rpy="-1.5479 -1.5708 -1.5708" />
+    <parent
+      link="arm_link_6" />
+    <child
+      link="cam_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
