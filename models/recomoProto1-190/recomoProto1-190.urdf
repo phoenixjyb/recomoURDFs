@@ -22,7 +22,7 @@
   3. JOINT LIMITS (Aligned with recomoProto1):
      - arm_joint_1 (yaw): ±180° (±3.1416 rad), effort=30 N·m, velocity=0.5 rad/s
      - arm_joint_2 (pitch): ±90° (±1.5708 rad), effort=30 N·m, velocity=0.5 rad/s
-     - arm_joint_3 (elbow): ±90° (±1.5708 rad), effort=30 N·m, velocity=0.5 rad/s
+     - arm_joint_3 (elbow): ±135° (±2.3562 rad), effort=30 N·m, velocity=0.5 rad/s
      - arm_joint_4 (gimbal yaw): ±180° (±3.1416 rad), effort=10 N·m, velocity=0.5 rad/s
      - arm_joint_5 (gimbal roll): -95° to +240° (-1.6581 to 4.1888 rad), effort=10 N·m
      - arm_joint_6 (gimbal pitch): -112° to +214° (-1.9548 to 3.7350 rad), effort=10 N·m
@@ -270,8 +270,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="-1.5708"
-      upper="1.5708"
+      lower="-2.3562"
+      upper="2.3562"
       effort="30.0"
       velocity="0.5" />
   </joint>
@@ -328,8 +328,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="-1.5708"
-      upper="1.5708"
+      lower="-2.3562"
+      upper="2.3562"
       effort="30.0"
       velocity="0.5" />
   </joint>
