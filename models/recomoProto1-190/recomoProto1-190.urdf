@@ -4,7 +4,7 @@
   
   Date: 2026-01-27
   Status: Initial setup based on recomoProto1 characteristics
-  Last Update: 2026-02-05 - Fixed joint1 and joint3 axis directions
+  Last Update: 2026-02-06 - Updated gimbal joint limits to match RS4 driver config
   
   MODIFICATIONS APPLIED:
   
@@ -20,17 +20,22 @@
      - arm_link_2: 1.4 kg (increased from 0.370 kg - motor + link mass)
      - arm_link_3: 1.1 kg (increased from 0.729 kg - adjusted for motor)
      
-  3. JOINT LIMITS (Aligned with recomoProto1):
+  3. JOINT LIMITS (Updated 2026-02-06 to match RS4 driver):
      - arm_joint_1 (yaw): ±180° (±3.1416 rad), effort=30 N·m, velocity=0.5 rad/s
      - arm_joint_2 (pitch): ±90° (±1.5708 rad), effort=30 N·m, velocity=0.5 rad/s
      - arm_joint_3 (elbow): ±135° (±2.3562 rad), effort=30 N·m, velocity=0.5 rad/s
-     - arm_joint_4 (gimbal yaw): ±180° (±3.1416 rad), effort=10 N·m, velocity=0.5 rad/s
-     - arm_joint_5 (gimbal roll): -95° to +240° (-1.6581 to 4.1888 rad), effort=10 N·m
-     - arm_joint_6 (gimbal pitch): -112° to +214° (-1.9548 to 3.7350 rad), effort=10 N·m
+     - joint3_gimbal_yaw: -180° to +180° (-3.1416 to 3.1416 rad), effort=10 N·m, velocity=0.5 rad/s
+     - joint2_gimbal_roll: -235° to +90° (-4.1015 to 1.5708 rad), effort=10 N·m, velocity=0.5 rad/s
+     - joint1_gimbal_pitch: -210° to +110° (-3.6652 to 1.9199 rad), effort=10 N·m, velocity=0.5 rad/s
      
   4. AXIS DIRECTION CORRECTIONS (2026-02-05):
      - joint1_gimbal_pitch: axis changed from [0 0 -1] to [0 0 1]
      - joint3_gimbal_yaw: axis changed from [0 0 -1] to [0 0 1]
+     
+  5. GIMBAL LIMITS UPDATE (2026-02-06):
+     - Updated joint2_gimbal_roll: from (-95° to 240°) to (-235° to 90°)
+     - Updated joint1_gimbal_pitch: from (-112° to 214°) to (-210° to 110°)
+     - Now matches DJI RS4 driver configuration (hardware validated)
 -->
 <!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
@@ -449,8 +454,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="-1.6581"
-      upper="4.1888"
+      lower="-4.1015"
+      upper="1.5708"
       effort="10.0"
       velocity="0.5" />
   </joint>
@@ -507,8 +512,8 @@
     <axis
       xyz="0 0 1" />
     <limit
-      lower="-1.9548"
-      upper="3.7350"
+      lower="-3.6652"
+      upper="1.9199"
       effort="10.0"
       velocity="0.5" />
   </joint>
