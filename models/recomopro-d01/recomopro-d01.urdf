@@ -140,9 +140,9 @@
           filename="package://recomopro-d01/meshes/base_link.STL" />
       </geometry>
       <material
-        name="">
+        name="base_link_material">
         <color
-          rgba="1 1 1 1" />
+          rgba="1 0.6 0 1" />
       </material>
     </visual>
     <collision>
@@ -187,7 +187,7 @@
           filename="package://recomopro-d01/meshes/arm_base_Link.STL" />
       </geometry>
       <material
-        name="">
+        name="arm_base_link_material">
         <color
           rgba="0.81176 0.84314 0.9098 1" />
       </material>
@@ -240,9 +240,9 @@
           filename="package://recomopro-d01/meshes/arm_link_1.STL" />
       </geometry>
       <material
-        name="">
+        name="arm_link_1_material">
         <color
-          rgba="1 1 1 1" />
+          rgba="0.81176 0.84314 0.9098 1" />
       </material>
     </visual>
     <collision>
@@ -300,9 +300,9 @@
           filename="package://recomopro-d01/meshes/arm_link_2.STL" />
       </geometry>
       <material
-        name="">
+        name="arm_link_2_material">
         <color
-          rgba="1 1 1 1" />
+          rgba="0.92 0.92 0.92 1" />
       </material>
     </visual>
     <collision>
@@ -420,9 +420,9 @@
           filename="package://recomopro-d01/meshes/arm_link_4.STL" />
       </geometry>
       <material
-        name="">
+        name="arm_link_4_material">
         <color
-          rgba="1 1 1 1" />
+          rgba="0.96078 0.83137 0.72549 1" />
       </material>
     </visual>
     <collision>
@@ -480,9 +480,9 @@
           filename="package://recomopro-d01/meshes/arm_link_5.STL" />
       </geometry>
       <material
-        name="">
+        name="arm_link_5_material">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.70588 0.85882 0.7451 1" />
       </material>
     </visual>
     <collision>
@@ -540,9 +540,9 @@
           filename="package://recomopro-d01/meshes/arm_link_6.STL" />
       </geometry>
       <material
-        name="">
+        name="arm_link_6_material">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0.79216 0.78039 0.89412 1" />
       </material>
     </visual>
     <collision>
@@ -600,9 +600,9 @@
           filename="package://recomopro-d01/meshes/cam_link.STL" />
       </geometry>
       <material
-        name="">
+        name="cam_link_material">
         <color
-          rgba="0.79216 0.81961 0.93333 1" />
+          rgba="0 0 0 1" />
       </material>
     </visual>
     <collision>
